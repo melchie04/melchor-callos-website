@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@layer utilities {
+  .animate-shake {
+    animation: shake 0.3s infinite;
+  }
+}
+
+body {
+  font-family: "Raleway";
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.circular-spin-animation::before {
+  content: "";
+  position: absolute;
+  inset: -10px 60px;
+  transition: 0.5s;
+  animation: spin 4s linear infinite;
+}
+
+.circular-spin-animation:hover::before {
+  inset: -20px 0px;
+}
+
+.circular-spin-animation::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.rectangular-spin-animation::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    #1ba098
+  );
+  animation: spin 4s linear infinite;
+  animation-delay: -2s;
+}
+
+.rectangular-spin-animation::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    #947b61
+  );
+  animation: spin 4s linear infinite;
+}
+
+.dark .rectangular-spin-animation::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    #deb992
+  );
+  animation: spin 4s linear infinite;
+}
