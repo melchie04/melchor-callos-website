@@ -7,13 +7,13 @@ import Download from "./layouts/Download";
 import AnimatedRoutes from "./components/customs/AnimatedRoutes";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 8000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 8000);
+  }, []);
 
   return (
     <>
