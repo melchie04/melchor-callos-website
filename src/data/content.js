@@ -1,9 +1,11 @@
 import mc from "../assets/icons/mc.png";
 import preloader from "../assets/icons/preloader.svg";
 import profileImg from "../assets/images/profileImg.png";
-import projImg01 from "../assets/images/projImg01.jpg";
-import projImg02 from "../assets/images/projImg02.jpg";
-import projImg03 from "../assets/images/projImg03.jpg";
+import projImg01 from "../assets/images/projects/projImg01.jpg";
+import projImg02 from "../assets/images/projects/projImg02.jpg";
+import projImg03 from "../assets/images/projects/projImg03.jpg";
+import projImg04 from "../assets/images/projects/projImg04.jpg";
+import projImg05 from "../assets/images/projects/projImg05.jpg";
 import icon01 from "../assets/icons/jmm.png";
 import icon02 from "../assets/icons/vertere.png";
 import icon03 from "../assets/icons/aaisi.png";
@@ -77,8 +79,26 @@ export const portfolioData = {
       demo: "https://melchie04-online-palaba.netlify.app/",
       tech: "React JS | Tailwind CSS",
       description:
-        "Online Palaba is a landing page website for a laundry services and logistics business. It showcases what the brand is all about and provides a glimpse into the type of experience customers can expect when they visit us.",
+        "Online Palaba is a landing page website for a laundry services and logistics business that offers a mobile app for its customers. It showcases what the brand is all about and provides a glimpse into the type of experience customers can expect when they visit us.",
       image: projImg03,
+    },
+    {
+      title: "ChowVi",
+      github: "https://github.com/melchie04/chowvi-website",
+      demo: "https://melchie04-chowvi.netlify.app/",
+      tech: "React JS | Tailwind CSS",
+      description:
+        "ChowVi is a landing page website for a food delivery and fast food business, providing customers with a convenient and delightful dining experience right at their fingertips. It showcases what the brand is all about and gives a glimpse into the type of experience customers can expect when they visit us.",
+      image: projImg04,
+    },
+    {
+      title: "ChatMe App",
+      github: "https://github.com/melchie04/chat-app-website",
+      demo: "https://melchie04-chat-app-website.netlify.app/",
+      tech: "MERN | Tailwind CSS",
+      description:
+        "This is a MERN full-stack chat app that harnesses the power of Socket.io, enabling real-time messaging while ensuring user privacy through encrypted storage of their information in a MongoDB database. Stay connected and engage in meaningful conversations with ease.",
+      image: projImg05,
     },
   ],
 };
