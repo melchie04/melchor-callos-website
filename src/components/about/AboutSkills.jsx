@@ -40,7 +40,7 @@ const AboutSkills = ({ aboutData }) => {
       initial={inView ? { opacity: 0.1 } : { opacity: 1 }}
       animate={inView ? { opacity: 1 } : { opacity: 0.1 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col justify-center items-center mb-20 mt-32"
+      className="flex flex-col justify-center items-center my-10"
     >
       <p className="font-semibold text-xl text-primary mb-5">
         Here are my skills:

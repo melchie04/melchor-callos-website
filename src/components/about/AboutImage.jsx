@@ -13,7 +13,7 @@ const AboutImage = ({ aboutData }) => {
       initial={inView ? { opacity: 0.1 } : { opacity: 1 }}
       animate={inView ? { opacity: 1 } : { opacity: 0.1 }}
       transition={{ duration: 0.5 }}
-      className="flex justify-center items-center w-full"
+      className="flex justify-center items-center w-full my-10"
     >
       <div className="relative w-[250px] h-[250px] bg-gray-800 dark:bg-gray-200 rounded-lg flex justify-center items-center overflow-hidden rectangular-spin-animation">
         <div className="absolute inset-[5px] rounded-lg bg-light dark:bg-dark z-10">
