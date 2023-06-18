@@ -7,32 +7,34 @@ const DarkModeProvider = ({ children }) => {
 
   const toggleDarkMode = () => {
     if (document.documentElement.classList.contains("dark")) {
-      document.documentElement.classList.remove("dark");
-      localStorage.theme = "light";
-      setIsDarkMode(false);
+      setLightMode();
     } else {
-      document.documentElement.classList.add("dark");
-      localStorage.theme = "dark";
-      setIsDarkMode(true);
+      setDarkMode();
     }
+  };
+
+  const setDarkMode = () => {
+    document.documentElement.classList.add("dark");
+    localStorage.theme = "dark";
+    setIsDarkMode(true);
+  };
+
+  const setLightMode = () => {
+    document.documentElement.classList.remove("dark");
+    localStorage.theme = "light";
+    setIsDarkMode(false);
   };
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
     if (storedTheme) {
       if (storedTheme === "dark") {
-        document.documentElement.classList.add("dark");
-        localStorage.theme = "dark";
-        setIsDarkMode(true);
+        setDarkMode();
       } else {
-        document.documentElement.classList.remove("dark");
-        localStorage.theme = "light";
-        setIsDarkMode(false);
+        setLightMode();
       }
     } else {
-      document.documentElement.classList.add("dark");
-      localStorage.theme = "dark";
-      setIsDarkMode(true);
+      setDarkMode();
     }
   }, []);
 

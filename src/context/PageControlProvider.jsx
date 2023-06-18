@@ -1,15 +1,16 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const PageControlContext = createContext();
 
 const PageControlProvider = ({ children }) => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [activePage, setActivePage] = useState("/");
 
   useEffect(() => {
-    navigate("/");
-  }, []);
+    setActivePage(location.pathname);
+  }, [navigate]);
 
   return (
     <PageControlContext.Provider value={{ activePage, setActivePage }}>

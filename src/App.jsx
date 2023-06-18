@@ -10,9 +10,16 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
+    const isAppLoaded = localStorage.getItem("isAppLoaded");
+
+    if (isAppLoaded) {
       setIsLoading(false);
-    }, 8000);
+    } else {
+      setTimeout(() => {
+        setIsLoading(false);
+        localStorage.setItem("isAppLoaded", true);
+      }, 4000);
+    }
   }, []);
 
   return (
